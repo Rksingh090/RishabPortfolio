@@ -1,8 +1,10 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import "./styles/home.css";
+
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import profileImg from './assets/profile.jpg';
+import ProjectLine from './components/Projectline';
+
 
 import htmlSvg from './assets/svg/html.svg';
 import cssSvg from './assets/svg/css.svg';
@@ -17,13 +19,13 @@ import dockerSvg from './assets/svg/docker.svg';
 import djangoSvg from './assets/svg/django.svg';
 import expressSvg from './assets/svg/express.svg';
 
-import ProjectLine from './components/Projectline';
+import bgAudio from './assets/music/bg.mp3'
 
 const Home = () => {
     const skillsRef = useRef();
     const [isVisible, setIsVisible] = useState(false);
 
-    const [skills, setSkills] = useState([
+    const skills = useMemo(() => [
         {
             skill: "HTML",
             logo: htmlSvg
@@ -72,7 +74,7 @@ const Home = () => {
             skill: "Docker",
             logo: dockerSvg
         },
-    ])
+    ], [])
 
     const options = useMemo(() => {
         return {
@@ -102,7 +104,10 @@ const Home = () => {
 
     return (
         <div>
+
             <Navbar />
+
+            {/* <audio src={bgAudio} autoPlay loop></audio> */}
             <div className='homeContainer'>
 
                 {/* introduction  */}
@@ -155,7 +160,7 @@ const Home = () => {
                 </div>
 
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
