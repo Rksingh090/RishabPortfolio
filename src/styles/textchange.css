@@ -1,0 +1,46 @@
+
+/* text changing anim  */
+.dynamictext {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    align-items: flex-start;
+    margin-left: 5px;
+    overflow: hidden;
+}
+.dynamictext > span{
+    position: relative;
+    font-size: 32px;
+    line-height: 50px;
+    height: 100%;
+    color: white;
+    top: 0;
+    letter-spacing: 2px;
+    font-family: "Sofia", sans-serif;
+    font-weight: 200;
+    animation: slide 12s steps(4) infinite;
+
+}
+.dynamictext > span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 35;
+    background-color: #402c1b;
+    border-left: 2px solid var(--main);
+}
+.dynamictext > span:nth-child(1)::after{
+    animation: typing 3s steps(14) infinite;
+}
+.dynamictext > span:nth-child(2)::after{
+    animation: typing 3s steps(13) infinite;
+}
+.dynamictext > span:nth-child(3)::after{
+    animation: typing 3s steps(19) infinite;
+}
+.dynamictext > span:nth-child(4)::after{
+    animation: typing 3s steps(13) infinite;
+}

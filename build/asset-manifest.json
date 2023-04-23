@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5f13c62c.css",
+    "main.js": "/static/js/main.d07ec15c.js",
+    "static/media/profile.jpg": "/static/media/profile.ab13ee418bbd147f8950.jpg",
+    "static/media/mysql.svg": "/static/media/mysql.04b4649e647fd35ab1cd7bdede174d2a.svg",
+    "static/media/docker.svg": "/static/media/docker.57161c02ec50ae4c02e02f7df6e32186.svg",
+    "static/media/react.svg": "/static/media/react.4ccc71ae38adae7faf375193f909b265.svg",
+    "static/media/nodejs.svg": "/static/media/nodejs.753c7e034c28139a6474604758e1fae5.svg",
+    "static/media/flutter.svg": "/static/media/flutter.5a552db1be1675f2834014047a0710c7.svg",
+    "static/media/mongo.svg": "/static/media/mongo.1df88aa2cb55caaefab2d7422d7fdc8b.svg",
+    "static/media/html.svg": "/static/media/html.94f92217f593b0b50d42145792dc6289.svg",
+    "static/media/go.svg": "/static/media/go.b6a3228371c038b4047f2db54df7a6f5.svg",
+    "static/media/css.svg": "/static/media/css.62faa0aebc02b3ece3b9582170b5bda9.svg",
+    "static/media/javaScript.svg": "/static/media/javaScript.8e1ee00491eba16cfeb9d4633592629d.svg",
+    "static/media/express.svg": "/static/media/express.0383b10a6c1549607414e89dd73433f7.svg",
+    "index.html": "/index.html",
+    "static/media/django.svg": "/static/media/django.3869abec84c425ca5782bb4c19155438.svg",
+    "main.5f13c62c.css.map": "/static/css/main.5f13c62c.css.map",
+    "main.d07ec15c.js.map": "/static/js/main.d07ec15c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f13c62c.css",
+    "static/js/main.d07ec15c.js"
+  ]
+}

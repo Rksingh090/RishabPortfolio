@@ -1,0 +1,274 @@
+/* navbar  */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.192);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    z-index: 555;
+}
+
+.navcontainer {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading {
+    text-decoration: none;
+}
+
+.heading>h2 {
+    font-size: 26px;
+    color: white;
+    font-family: "Anuphan", sans-serif;
+    letter-spacing: 1.5 px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.angleOpen,
+.angleClose {
+    font-size: 22px;
+    color: var(--main);
+}
+
+.angleClose {
+    margin-left: 8px;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 30px;
+}
+
+.navLinks>li {
+    list-style: none;
+}
+
+.navLinks>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Anuphan", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.closeLink {
+    color: var(--main);
+}
+
+
+/* home page  */
+.homeContainer {
+    position: relative;
+}
+
+
+/* intro section  */
+.introSection {
+    position: relative;
+    scroll-snap-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #402c1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.myIntroduction {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    animation-delay: .5s;
+    animation: scaleIntro 1.5s 1 forwards;
+    transform-origin: 0 0;
+}
+
+
+.introLine1,
+.introLine2 {
+    font-size: 25px;
+    line-height: 28px;
+    font-weight: 400;
+    color: white;
+    font-family: "Anuphan", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0 15px;
+}
+
+.introLine2 {
+    margin-top: 20px;
+}
+
+.myName {
+    color: var(--main);
+    font-size: 45px;
+    letter-spacing: 1px;
+    font-family: "Anuphan", sans-serif;
+    font-weight: 800;
+}
+
+.startPoint {
+    margin-bottom: 15px;
+}
+
+
+.greetAction {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.08);
+    color: var(--main);
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    font-family: "Anuphan", sans-serif;
+    ;
+}
+
+.greetAction:hover {
+    background-color: rgba(0, 0, 0, 0.28);
+}
+
+/* skill section  */
+.skillSections {
+    scroll-snap-align: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right bottom, rgb(54, 31, 23), rgb(27, 7, 36));
+    background-size: 400%;
+    animation: gradient 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topBottomSkils {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.skillSets {
+    width: 70%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.skillSets.ended {
+    justify-items: flex-end;
+}
+
+.skillItem {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.053);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    user-select: none;
+    width: 0;
+    overflow: hidden;
+}
+
+.skillItem.active {
+    animation: widthGrow .8s 1 forwards;
+    animation-delay: var(--delay);
+}
+
+
+.skillItem>img {
+    width: 0px;
+}
+
+.skillItem>img.active {
+    animation: imgGrow 1s 1 forwards;
+    animation-delay: var(--img);
+    aspect-ratio: 1;
+}
+
+
+.skillItem>p {
+    font-size: 16px;
+    color: white;
+    font-family: "Anuphan", sans-serif;
+    white-space: nowrap;
+}
+
+
+
+/* projects  */
+.projects {
+    scroll-snap-align: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right bottom, rgb(101, 33, 4), rgb(112, 4, 42));
+    background-size: 400%;
+    animation: gradient 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.plineContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.plineContainer>svg {
+    width: 100%;
+    height: 100%;
+}
+
+.plinePath {
+    fill: none;
+    transition: all .4s ease-in-out;
+    stroke: var(--main);
+}
+
+.plineCircle {
+    fill: var(--main);
+    cursor: pointer;
+    position: relative;
+}
+.singleProject {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -44%);
+    background-color: white;
+    width: 700px;
+    height: 420px;
+    border-radius: 5px;
+}
