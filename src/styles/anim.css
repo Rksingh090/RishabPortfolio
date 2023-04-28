@@ -18,7 +18,7 @@
         height: 0;
     }
     100% {
-        height: 60%;
+        height: 100%;
     }
 }
 
@@ -55,11 +55,10 @@
 @keyframes widthGrow {
     0% {
         width: 0;
-        padding: 12px 20px;
+        padding: 12px 0;
     }
-
-    50% {
-        width: 80%;
+    10% {
+        width: 0;
     }
 
     100% {
@@ -72,10 +71,5 @@
     0% {
         width: 0px;
         height: 0px;
-    }
-
-    100% {
-        width: 30px;
-        height: 30px;
     }
 }
