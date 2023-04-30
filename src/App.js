@@ -1,8 +1,11 @@
 import Home from "./Home";
+import HomeContext from "./context/HomeContext";
 
 function App() {
   return (
-    <Home />
+    <HomeContext>
+      <Home />
+    </HomeContext>
   );
 }
 

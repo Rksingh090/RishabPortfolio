@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import "./styles/home.css";
+import "./util/utils.css";
 
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ProjectLine from './components/Projectline';
-
 
 import htmlSvg from './assets/svg/html.svg';
 import cssSvg from './assets/svg/css.svg';
@@ -18,14 +18,26 @@ import mysqlSvg from './assets/svg/mysql.svg';
 import dockerSvg from './assets/svg/docker.svg';
 import djangoSvg from './assets/svg/django.svg';
 import expressSvg from './assets/svg/express.svg';
+import gitSvg from './assets/svg/git.svg';
+
 import profileImg from './assets/images/profile.jpg';
 
 import { FaLinkedinIn } from 'react-icons/fa';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai';
+import { useHome } from './context/HomeContext';
 
 const Home = () => {
     const skillsRef = useRef();
+    const mouseFollow = useRef();
+
+    const { hovered, onHoverStart, onHoverEnd } = useHome()
     const [isVisible, setIsVisible] = useState(false);
+
+    const [cursorPoint, setCursorPoint] = useState({
+        x: 0,
+        y: 0
+    });
+
 
     const skills = useMemo(() => [
         {
@@ -49,16 +61,16 @@ const Home = () => {
             logo: nodeSvg
         },
         {
-            skill: "Express JS",
-            logo: expressSvg
-        },
-        {
             skill: "Django",
             logo: djangoSvg
         },
         {
             skill: "Flutter",
             logo: flutterSvg
+        },
+        {
+            skill: "Github",
+            logo: gitSvg
         },
         {
             skill: "MongoDB",
@@ -103,11 +115,27 @@ const Home = () => {
         return () => observer.unobserve(skillCurrent)
     }, [skillsRef, options, handleObserver])
 
+    // cursor movement 
+    const handleCursorMove = (mouseE) => {
+        const { pageY, pageX } = mouseE;
+        setCursorPoint({
+            x: pageX,
+            y: pageY
+        })
+    }
+
+    useEffect(() => {
+        document.addEventListener("mousemove", handleCursorMove)
+        return () => document.removeEventListener("mousemove", handleCursorMove);
+    }, [])
+
 
     return (
-        <div>
+        <div className='myHomePage'>
 
             <Navbar />
+            <div className={`cursorBorder ${hovered && "hovered"} `}
+                style={{ left: cursorPoint.x - 18, top: cursorPoint.y - 18 }} ref={mouseFollow}></div>
 
             {/* <audio src={bgAudio} autoPlay loop></audio> */}
             <div className='homeContainer'>
@@ -133,13 +161,17 @@ const Home = () => {
                                     </div>
                                 </h2>
                             </div>
-                            <a href="/#skills" className='greetAction'>Let me show You.....</a>
+                            <a href="/#skills" className='greetAction'
+                                onMouseEnter={onHoverStart}
+                                onMouseLeave={onHoverEnd}
+                            >Let me show You.....</a>
                         </div>
                     </div>
                 </div>
 
                 {/* skill section  */}
-                <div className="skillSections" id="skills">
+                <div className="skillSections flexCenter" id="skills">
+                    <h2 className='sectionHeading'>Skills</h2>
                     <div className="skillSets" ref={skillsRef}>
                         {skills.map((skill, idx) => {
                             let delay = (Number(idx) * 0.5) + 0.2;
@@ -163,28 +195,51 @@ const Home = () => {
                 </div>
 
                 {/* about section  */}
-                <div className="aboutSection" id="about">
+                <div className="gallerySection" id="gallery">
+                    <h2 className='sectionHeading'>Gallery</h2>
+                </div>
+
+                {/* about section  */}
+                <div className="aboutSection flexCol " id="about">
+                    <h2 className='sectionHeading'>About Me</h2>
                     <div className="innerAboutSec">
                         <div className='myProfile'>
                             <div className='profileImgDiv'>
                                 <img src={profileImg} alt="" />
+                                <div className='profileImgBG'></div>
                             </div>
                             <div className='profileMainData'>
                                 <h2 className='profileName'>Rishab Singh</h2>
 
-                                <div>
-                                    <a href='mailto:w3b.dev.rishu@gmail.com' className='profileEmail'>w3b.dev.rishu@gmail.com</a>
-                                    <a href='phone:9022489938' className='profilePhone'>9022489938</a>
+                                <div className='flexCol'>
+                                    <a href='mailto:w3b.dev.rishu@gmail.com' className='profileEmail'
+                                        onMouseEnter={onHoverStart}
+                                        onMouseLeave={onHoverEnd}
+                                    >w3b.dev.rishu@gmail.com</a>
+                                    <a href='tel:9022489938' className='profilePhone'
+                                        onMouseEnter={onHoverStart}
+                                        onMouseLeave={onHoverEnd}
+                                    >9022489938</a>
                                 </div>
 
-                                <div>
-                                    <a href="https://linkedin.com" className='socialLinks'>
+                                <div className='flexRowICenter socialLinks'>
+                                    <a href="https://www.linkedin.com/in/rishab-singh-b97554198/" target='_blank' rel="noreferrer" className='flexCenter halfRounded'
+                                        onMouseEnter={onHoverStart}
+                                        onMouseLeave={onHoverEnd}
+                                    >
                                         <FaLinkedinIn />
-                                        <span>LinkedIn</span>
                                     </a>
-                                    <a href="https://linkedin.com" className='socialLinks'>
+                                    <a href="https://github.com/Rksingh090" target='_blank' rel="noreferrer" className='flexCenter halfRounded'
+                                        onMouseEnter={onHoverStart}
+                                        onMouseLeave={onHoverEnd}
+                                    >
                                         <AiFillGithub />
-                                        <span>Github</span>
+                                    </a>
+                                    <a href="https://wa.me/9022489938" target='_blank' rel="noreferrer" className='flexCenter halfRounded'
+                                        onMouseEnter={onHoverStart}
+                                        onMouseLeave={onHoverEnd}
+                                    >
+                                        <AiOutlineWhatsApp />
                                     </a>
                                 </div>
                             </div>
@@ -192,7 +247,7 @@ const Home = () => {
                         </div>
                         <div className='aboutMeTexts'>
                             <p className='aboutParas'>
-                                Hello and welcome to my portfolio! My name is <span className='bgText bigText2 space1'>Rishab Singh</span>, and I'm a passionate software developer with 6 months of experience in the IT industry. During this time, I had the opportunity to work for a startup where I developed my skills in <span className='bgText space1'>ReactJS, Node JS, Mongo DB, Docker, Go, HTML, CSS, JS/JSX, ExpressJS, WebSockets,</span> and more.
+                                Hello and welcome to my portfolio! My name is <span className='bgText bigText2'>Rishab Singh</span>, and I'm a passionate software developer with 6 months of experience in the IT industry. During this time, I had the opportunity to work for a startup where I developed my skills in <span className='bgText'>ReactJS, Node JS, Mongo DB, Docker, Go, HTML, CSS, JS/JSX, ExpressJS, WebSockets,</span> and more.
                             </p>
                             <p className='aboutParas'>
                                 As a software developer, I enjoy creating innovative solutions that solve complex problems. I believe in the power of technology to transform the world, and I'm excited to be part of this revolution. I'm a quick learner and enjoy keeping up with the latest trends and technologies in the industry.
@@ -202,11 +257,10 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-
                 </div>
 
+                <Footer />
             </div>
-            <Footer />
         </div>
     )
 }

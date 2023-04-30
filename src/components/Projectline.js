@@ -3,10 +3,13 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { IoMdClose } from 'react-icons/io'
 import { AnimatePresence, motion } from 'framer-motion'
 import { fashionGallery, jshopGallery, promanGallery } from "../util/image";
+import { useHome } from "../context/HomeContext";
 
 function ProjectLine() {
   const [showProject, setShowProject] = useState(false)
   const [showProjectNo, setShowProjectNo] = useState(1)
+
+  const { onHoverEnd, onHoverStart } = useHome();
 
   const projectData = useMemo(() => [
     {
@@ -54,13 +57,18 @@ function ProjectLine() {
           className="plinePath"
           transform="translate(-146.35 -12.11)"
         ></path>
-        <path d="M723.45 177.02L246.81 177.02" className="plinePath"></path>
+        <path d="M723.45 177.02L246.81 177.02"
+
+          className="plinePath"></path>
         <path
           d="M147.85 12.11V80.9a108.23 108.23 0 00108.23 108.23h98.64M393.2 188v1.12a19.25 19.25 0 01-38.44 0V188a19.26 19.26 0 0138.52 0z"
           className="plinePath"
           transform="translate(-146.35 -12.11)"
         ></path>
-        <circle cx="227.59" cy="175.9" r="13.3" className="plineCircle"
+        <circle cx="227.59" cy="175.9" r="13.3"
+          className="plineCircle"
+          onMouseEnter={onHoverStart}
+          onMouseLeave={onHoverEnd}
           onClick={() => {
             setShowProject(true);
             setShowProjectNo(1)
@@ -78,6 +86,8 @@ function ProjectLine() {
         ></path>
         <circle
           cx="1051.69" cy="384.25" r="13.3" className="plineCircle"
+          onMouseEnter={onHoverStart}
+          onMouseLeave={onHoverEnd}
           onClick={() => {
             setShowProject(true);
             setShowProjectNo(3)
@@ -95,6 +105,8 @@ function ProjectLine() {
           transform="translate(-146.35 -12.11)"
         ></path>
         <circle cx="742.71" cy="177.02" r="13.3" className="plineCircle"
+          onMouseEnter={onHoverStart}
+          onMouseLeave={onHoverEnd}
           onClick={() => {
             setShowProject(true);
             setShowProjectNo(2)
@@ -112,6 +124,8 @@ function ProjectLine() {
           transform="translate(-146.35 -12.11)"
         ></path>
         <circle cx="526.93" cy="578.9" r="13.3" className="plineCircle"
+          onMouseEnter={onHoverStart}
+          onMouseLeave={onHoverEnd}
           onClick={() => {
             setShowProject(true);
             setShowProjectNo(4)

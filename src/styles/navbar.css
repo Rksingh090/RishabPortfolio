@@ -1,0 +1,147 @@
+/* navbar  */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.192);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    z-index: 555;
+}
+
+.navcontainer {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading {
+    text-decoration: none;
+}
+
+.heading>h2 {
+    font-size: 26px;
+    color: white;
+    font-family: "Anuphan", sans-serif;
+    letter-spacing: 1.5 px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.angleOpen,
+.angleClose {
+    font-size: 22px;
+    color: var(--main);
+}
+
+.angleClose {
+    margin-left: 8px;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 30px;
+}
+
+.navLinks>li {
+    list-style: none;
+}
+
+.navLinks>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Anuphan", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.closeLink {
+    color: var(--main);
+}
+
+
+/* mobile menu setting  */
+.menuHamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.mobNavlinkArea {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 75px;
+    bottom: 15px;
+    right: 15px;
+    width: 60%;
+    min-height: 450px;
+    background-color: rgba(0,0,0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 5px;
+}
+.mobNavLinks {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+
+.mobNavLinks>li  {
+    list-style: none;
+}
+.mobNavLinks>li>a  {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Anuphan", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.mobNavLinks>li>a>span {
+    font-size: 22px;
+}
+.classLink {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.244);
+    color: white;
+}
+
+@media only screen and (max-width: 500px) {
+    .navcontainer {
+        width: 90%;
+    }
+    .menuHamburger {
+        display: block;
+    }
+    .navlinkarea {
+        display: none;
+    }
+    .mobNavlinkArea {
+        display: flex;
+    }
+
+}

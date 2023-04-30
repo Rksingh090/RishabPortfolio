@@ -1,84 +1,17 @@
-/* navbar  */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.192);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(4px);
-    z-index: 555;
-}
-
-.navcontainer {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.heading {
-    text-decoration: none;
-}
-
-.heading>h2 {
-    font-size: 26px;
-    color: white;
-    font-family: "Anuphan", sans-serif;
-    letter-spacing: 1.5 px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.angleOpen,
-.angleClose {
-    font-size: 22px;
-    color: var(--main);
-}
-
-.angleClose {
-    margin-left: 8px;
-}
-
-.navLinks {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0 30px;
-}
-
-.navLinks>li {
-    list-style: none;
-}
-
-.navLinks>li>a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-family: "Anuphan", sans-serif;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-}
-
-.closeLink {
-    color: var(--main);
-}
-
-
 /* home page  */
 .homeContainer {
     position: relative;
 }
-
-
+.sectionHeading {
+    font-family: "Anuphan", sans-serif;
+    color: var(--main);
+}
+.w75 {
+    width: 75%;
+}
+.w80 {
+    width: 80%;
+}
 /* intro section  */
 .introSection {
     position: relative;
@@ -164,18 +97,14 @@
     background: linear-gradient(to right bottom, rgb(54, 31, 23), rgb(27, 7, 36));
     background-size: 400%;
     animation: gradient 10s ease infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 50px;
 }
-
 
 .skillSets {
     width: 80%;
-    height: 50%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px 30px;
 }
 
 .skillSets.ended {
@@ -185,14 +114,13 @@
 .skillItem {
     background-color: rgba(255, 255, 255, 0.053);
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: minmax(0, 30px) minmax(0, 1fr);
     align-items: center;
-    gap: 10px;
-    cursor: pointer;
+    gap: 15px;
     transition: all .2s ease-in-out;
     user-select: none;
     width: 0;
-    height: 100px;
+    height: 80px;
     overflow: hidden;
 }
 
@@ -207,11 +135,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .skillImg>img {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
 }
 
 .skillImg>img.active {
@@ -226,6 +155,8 @@
     color: white;
     font-family: "Anuphan", sans-serif;
     white-space: nowrap;
+    cursor: text;
+    user-select: text;
 }
 
 
@@ -458,9 +389,10 @@
 
 .innerAboutSec {
     margin-top: 50px;
-    width: 80%;
+    width: 75%;
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 6fr);
+    gap: 30px;
 }
 
 .myProfile {
@@ -473,21 +405,31 @@
 }
 
 .profileImgDiv {
-    width: 50%;
+    width: 150px;
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: gradient 4s ease-in-out infinite;
-    background: linear-gradient(to left, orange, red, purple, blue);
-    background-size: 200%;
+    position: relative;
 }
 
+.profileImgBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background: linear-gradient(to left, orange, red, purple, blue);
+    animation: rotateBG 4s ease-in-out infinite;
+}
 
 .profileImgDiv>img {
-    width: 95%;
+    z-index: 25;
+    position: relative;
+    width: 93%;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 50%;
@@ -504,10 +446,9 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 200px;
 }
 .profileMainData > div {
-    display: flex;
-    flex-direction: column;
     gap: 5px;
 }
 
@@ -523,24 +464,17 @@
     color: whitesmoke;
 }
 
-.allSocial {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-.socialLinks {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-}
-
-.socialLinks>svg,
-.socialLinks>span {
+.socialLinks > a {
+    width: 35px;
+    aspect-ratio: 1;
     color: white;
     font-family: "Anuphan", sans-serif;
+    background-color: #ffffff28;
+    margin-right: 6px;
+}
+.socialLinks > a:hover{
+    background-color: #ffffff48;
 }
 
 /* grid 2  */
@@ -555,6 +489,8 @@
     font-family: "Anuphan", sans-serif;
     color: white;
     line-height: 25px;
+    text-align: justify;
+    cursor: text;
 }
 
 .bgText {
@@ -575,4 +511,66 @@
 
 .space2 {
     padding: 0 10px;
+}
+
+
+
+
+@media only screen and (max-width: 500px){
+    .introSection {
+        max-height: 600px;
+    }
+    .introWithLine {
+        width: 90%;
+        height: 60%;
+    }
+    .startPoint {
+        font-size: 18px;
+    }
+    .introLine1,
+    .introLine2 {
+        font-size: 20px;
+    }
+    .myName {
+        font-size: 25px;
+    }
+    .dynamictext > span{
+        font-size: 25px;
+    }
+    .greetAction {
+        font-size: 14px;
+    }
+
+    /* skills  */
+    .skillSections {
+        height: auto;
+        padding: 50px 0;
+    }
+    .skillSets {
+        width: 90%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+    .skillItem {
+        grid-template-columns: minmax(0, 30px) minmax(0, 1fr);
+    }
+
+    /* about section  */
+    .aboutSection {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .profileImgDiv {
+        width: 60%;
+    }
+
+    .profileMainData {
+        width: 60%;
+    }
+
+    .innerAboutSec {
+        width: 90%;
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
