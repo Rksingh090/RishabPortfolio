@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import "../styles/navbar.css";
+import "./navbar.css";
 
 import { IoMdClose } from 'react-icons/io';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { useHome } from '../context/HomeContext'
+import { useHome } from '../../context/HomeContext';
+
 const Navbar = () => {
     const { onHoverStart, onHoverEnd } = useHome()
 

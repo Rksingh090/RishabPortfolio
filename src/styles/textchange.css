@@ -29,7 +29,7 @@
     width: 100%;
     height: 100%;
     z-index: 35;
-    background-color: #402c1b;
+    background-color: var(--introBG);
     border-left: 2px solid var(--main);
 }
 .dynamictext > span:nth-child(1)::after{

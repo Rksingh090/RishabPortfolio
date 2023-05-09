@@ -4,16 +4,18 @@
     justify-content: center;
     align-items: center;
 }
+
 .flexCol {
     display: flex;
     flex-direction: column;
 }
+
 .flexRow {
     display: flex;
     flex-direction: row;
 }
 
-.flexColICenter { 
+.flexColICenter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,4 +29,42 @@
 
 .halfRounded {
     border-radius: 50%;
+}
+
+
+.w75 {
+    width: 75%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+
+.ffAnuphan {
+    font-family: "Anuphan", sans-serif;
+}
+
+.hoverTranslateUp,
+.hoverTranslateRight {
+    transition: transform .4s ease-in-out;
+}
+
+.hoverColorChange:hover {
+    color: var(--main);
+}
+
+.hoverTranslateUp:hover {
+    transform: translateY(-5px);
+}
+
+.hoverTranslateRight:hover {
+    transform: translateX(5px);
+}
+
+/* glass effect  */
+.glass {
+    background: linear-gradient(to left top, rgba(194, 233, 255, 0.10) 0.27%, rgba(217, 217, 217, 0.2) 98.49%);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
 }

@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
+import './index.css';
+
+
+
+import './util/utils.css';
 import './styles/anim.css';
 import './styles/textchange.css';
 

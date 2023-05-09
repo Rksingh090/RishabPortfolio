@@ -1,8 +1,14 @@
 :root {
-    --main: #ff7300;
+    /* --main: #ff7300;
+    --secondary: #ff9f50; */
+    /* --main: #00ddff; */
+    --main: #00ffd5;
+    --secondary: #ff9f50;
+    --introBG: #010b17;
 }
 
-*, html {
+*,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +16,12 @@
     /* scroll-snap-type: y mandatory; */
     text-decoration: none;
 }
+
+html:not(.introSectioo > *) {
+    overflow-x: hidden;
+}
+
+
 ::selection {
     background-color: #ff7300;
     color: white !important;
@@ -18,9 +30,11 @@
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background-color: rgb(255, 200, 174);
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: var(--main);
 }
@@ -29,12 +43,13 @@
 .sizeXS {
     font-size: 24px;
 }
+
 .mainColor {
     color: var(--main);
 }
 
 /* timeline  */
-.timeline{
+.timeline {
     max-height: 600px;
     z-index: 45;
     background-color: var(--main);
@@ -55,6 +70,7 @@
     border: 2px solid var(--main);
     border-radius: 80px;
 }
+
 .endpointer {
     width: 10px;
     aspect-ratio: 1;
@@ -70,7 +86,7 @@
 .subPoint {
     font-size: 25px;
     color: rgb(180, 180, 180);
-    
+
 }
 
 .pageProgress {
@@ -84,6 +100,7 @@
     background: #ff730044 !important;
     opacity: 1 !important;
 }
+
 .splide__pagination__page.is-active {
     background: var(--main) !important;
     opacity: 1 !important;
@@ -110,10 +127,12 @@
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.3);
         background-color: #fff5;
     }
+
     100% {
         transform: scale(1);
     }
