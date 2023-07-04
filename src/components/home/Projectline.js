@@ -34,7 +34,8 @@ function ProjectLine() {
       reason: "Client Project",
       gallery: fashionGallery,
       technologies: ["JSX", "React", "Redux toolkit", "Flutter/Dart", "Node JS", "Mongo DB"],
-      reversed: true
+      reversed: true,
+      projectLink: "https://fashion-dashboard-ten.vercel.app"
     },
     {
       title: "EMI App"
