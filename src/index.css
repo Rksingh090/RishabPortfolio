@@ -5,6 +5,7 @@
     --main: #00ffd5;
     --secondary: #ff9f50;
     --introBG: #010b17;
+    --mainFont: "Anuphan", sans-serif;
 }
 
 *,
@@ -19,12 +20,7 @@ html {
 
 html:not(.introSectioo > *) {
     overflow-x: hidden;
-}
-
-
-::selection {
-    background-color: #ff7300;
-    color: white !important;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -32,7 +28,7 @@ html:not(.introSectioo > *) {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgb(255, 200, 174);
+    background-color: var(--introBG);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -48,39 +44,6 @@ html:not(.introSectioo > *) {
     color: var(--main);
 }
 
-/* timeline  */
-.timeline {
-    max-height: 600px;
-    z-index: 45;
-    background-color: var(--main);
-    width: 2px;
-    height: 0;
-    animation-delay: .5s;
-    animation: expandHeight 1.5s 1 forwards;
-    position: relative;
-}
-
-.startpointer {
-    width: 10px;
-    aspect-ratio: 1;
-    position: absolute;
-    top: -10px;
-    left: -4px;
-    z-index: 55;
-    border: 2px solid var(--main);
-    border-radius: 80px;
-}
-
-.endpointer {
-    width: 10px;
-    aspect-ratio: 1;
-    position: absolute;
-    bottom: -10px;
-    left: -4px;
-    z-index: 55;
-    border: 2px solid var(--main);
-    border-radius: 80px;
-}
 
 /* common  */
 .subPoint {
@@ -94,19 +57,6 @@ html:not(.introSectioo > *) {
     background-color: red;
 }
 
-
-/* splide slider pagination dots   */
-.splide__pagination__page {
-    background: #ff730044 !important;
-    opacity: 1 !important;
-}
-
-.splide__pagination__page.is-active {
-    background: var(--main) !important;
-    opacity: 1 !important;
-    transform: scale(1.4) !important;
-}
-
 .cursorBorder {
     position: absolute;
     border: 1px solid white;
@@ -116,7 +66,7 @@ html:not(.introSectioo > *) {
     z-index: 585;
     pointer-events: none;
     transform-origin: 50% 50%;
-    transition: transform .4s ease-in-out;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
 
 .cursorBorder.hovered {

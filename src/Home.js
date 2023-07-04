@@ -7,12 +7,11 @@ import Navbar from './components/navbar/Navbar';
 import IntroSection from './components/home/IntroSection';
 import SkillSection from './components/home/SkillSection';
 import AboutSection from './components/home/AboutSection';
-import GallerySection from './components/home/GallerySection';
 import ProjectLine from './components/home/Projectline';
 
 import { useHome } from './context/HomeContext';
 
-import { FiGithub, FiInstagram, FiLinkedin, FiTwitter,  } from 'react-icons/fi';
+import { FiGithub, FiInstagram, FiLinkedin, FiTwitter, } from 'react-icons/fi';
 
 
 const Home = () => {
@@ -44,7 +43,6 @@ const Home = () => {
     return (
         <div className='myHomePage'>
 
-            {/* navbar  */}
 
             {/* mouse cursor  */}
             <div
@@ -55,7 +53,7 @@ const Home = () => {
             <div className='fixedSocialIconsLeft'>
                 <a className='hoverTranslateUp hoverColorChange' href="https://github.com/Rksingh090" ><FiGithub size={22} /></a>
                 <a className='hoverTranslateUp hoverColorChange' href="https://www.linkedin.com/in/rishab-singh-b97554198" ><FiLinkedin size={22} /></a>
-                <a className='hoverTranslateUp hoverColorChange' href="" ><FiTwitter size={22} /></a>
+                <a className='hoverTranslateUp hoverColorChange' href="https://twitter.com/rishabs58256087?lang=en" ><FiTwitter size={22} /></a>
                 <a className='hoverTranslateUp hoverColorChange' href="https://www.instagram.com/08__rishab/" ><FiInstagram size={22} /></a>
                 <div className='verticalBottomLine'></div>
             </div>
@@ -72,6 +70,7 @@ const Home = () => {
             </div>
 
             <div className='homeContainer'>
+                {/* navbar  */}
                 <Navbar />
 
                 {/* intro section  */}
@@ -86,9 +85,8 @@ const Home = () => {
                 {/* projects section  */}
                 <ProjectLine />
 
-
-                {/* gallery section  */}
-                <GallerySection />
+                {/* projects section  */}
+                {/* <HireMe /> */}
 
                 <Footer />
             </div>

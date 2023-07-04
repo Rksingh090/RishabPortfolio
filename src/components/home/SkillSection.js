@@ -7,11 +7,11 @@ import reactSvg from '../../assets/svg/react.svg';
 import nodeSvg from '../../assets/svg/nodejs.svg';
 import flutterSvg from '../../assets/svg/flutter.svg';
 import mongoSvg from '../../assets/svg/mongo.svg';
-import goSvg from '../../assets/svg/go.svg';
 import mysqlSvg from '../../assets/svg/mysql.svg';
-import dockerSvg from '../../assets/svg/docker.svg';
+// import goSvg from '../../assets/svg/go.svg';
+// import dockerSvg from '../../assets/svg/docker.svg';
+// import gitSvg from '../../assets/svg/git.svg';
 import djangoSvg from '../../assets/svg/django.svg';
-import gitSvg from '../../assets/svg/git.svg';
 
 import figma from "../../assets/images/home/figma.png"
 import illustrator from "../../assets/images/home/illustrator.png"
@@ -86,12 +86,10 @@ const SkillSection = () => {
                         <h2 className='skillHeadingWhite'>Development</h2>
                         <div className="skillSets">
                             {skills.map((skill, idx) => {
-                                let delay = (Number(idx) * 0.5) + 0.2;
-                                let img = Number(idx) * 0.5;
                                 return (
-                                    <div key={idx} className={`skillItem`} style={{ "--delay": delay + "s" }}>
+                                    <div key={idx} className={`skillItem`}>
                                         <div className='skillImg'>
-                                            <img style={{ "--img": img + "s" }} src={skill.logo} alt="" />
+                                            <img src={skill.logo} alt="" />
                                         </div>
                                         <p>{skill.skill}</p>
                                     </div>

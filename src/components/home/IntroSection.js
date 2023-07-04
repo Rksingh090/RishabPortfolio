@@ -23,12 +23,23 @@ const IntroSection = () => {
                 <p className='introTextSummary ffAnuphan'>
                     As a developer with experience in Android and iOS app development, as well as web and UI/UX design, I possess a well-rounded set of skills that enables me to create comprehensive solutions for various platforms.
                 </p>
-                <a href="/#skills" className='greetAction'
-                    onMouseEnter={onHoverStart}
-                    onMouseLeave={onHoverEnd}
-                >
-                    Explore Now.....
-                </a>
+                <div className='introBtns'>
+                    <a href="/#skills" className='greetAction'
+                        onMouseEnter={onHoverStart}
+                        onMouseLeave={onHoverEnd}
+                    >
+                        Explore Now.....
+                    </a>
+                    <a href="https://download1593.mediafire.com/iwvy8z2cdvegzcXQMGkw570m-vEh4L35mnLGoyxH28KAImhhVPQh1VNxjIy3cKSAfF2Z7PYyzuhwMgxPRHVsP9TMU0KmcuYZN1Pl5x5lE_NZnmltyu0SsUuimpASfAEkXNjiUubJV7erkA-qycgOqKWXODYUafPHBr66uZ8XqCU8/g8sy41x62ds7uen/rishab_singh.pdf"
+                        className='downloadAction'
+                        download={"Rishab Singh"}
+                        onMouseEnter={onHoverStart}
+                        onMouseLeave={onHoverEnd}
+                        target="_blank"
+                    >
+                        Download Resume
+                    </a>
+                </div>
             </div>
         </div>
     )

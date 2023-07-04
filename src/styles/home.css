@@ -86,25 +86,41 @@
     margin-bottom: 15px;
 }
 
+.introBtns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 25px;
+}
 
-.greetAction {
-    color: var(--main);
+.greetAction,
+.downloadAction {
     padding: 15px 25px;
     cursor: pointer;
     transition: all .5s ease-in-out;
     font-family: "Anuphan", sans-serif;
-    border: 1px solid var(--main);
-    border-radius: 5px;
-    margin-top: 25px;
-    background: transparent;
     position: relative;
     z-index: 57;
+}
+.downloadAction,
+.greetAction {
+    color: var(--main);
+    border: 1px solid var(--main);
+    border-radius: 5px;
+    background: transparent;
 }
 
 .greetAction:hover {
     backdrop-filter: blur(2px);
     box-shadow: 4px 4px 8px var(--main);
     transform: translate(-2px, -2px);
+}
+
+.downloadAction:hover {
+    color: black;
+    border: 1px solid var(--main);
+    border-radius: 5px;
+    background: var(--main);
 }
 
 
@@ -407,18 +423,40 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 20px;
     width: 100%;
 }
 
 .technology {
-    padding: 5px 10px;
     border-radius: 15px;
     color: white;
     font-family: "Anuphan", sans-serif;
     font-size: 12px;
 }
 
+.projectVisitLink {
+    font-family: var(--mainFont);
+    color: var(--main);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    transition: all .5s ease-in-out;
+}
+
+.selfStart {
+    align-self: flex-start;
+}
+.projectVisitLink:hover {
+    transform: translateX(5px);
+}
+
+.projectCreatedOn {
+    color: #999;
+    font-family: var(--mainFont);
+    font-size: 12px;
+}
 
 .plineHint {
     position: absolute;
