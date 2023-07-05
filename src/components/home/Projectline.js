@@ -1,20 +1,21 @@
 import React, { useMemo } from "react";
 import { motion } from 'framer-motion';
 import { fashionGallery, jshopGallery, promanGallery } from "../../util/image";
-import {BiLinkExternal} from 'react-icons/bi';
+import { BiLinkExternal } from 'react-icons/bi';
 
 function ProjectLine() {
 
   const projectData = useMemo(() => [
     {
-      title: "JShop",
-      description: "An online jewellery shop application created using Django and HTML with SQLite database server.",
-      explaination: "It is my first project that i have made which includes backend and database codes also.",
-      gallery: jshopGallery,
-      createdOn: "January 2019",
-      reason: "Personal Project",
-      technologies: ["Django", "HTML", "CSS", "JavaScript", "SQLlite"],
-      reversed: true
+      title: "Fashion Level",
+      description: "The e-commerce platform is a modern and efficient solution that provides a seamless shopping experience to customers.",
+      explaination: "Which includes Admin-Panel (ReactJS), Android/IOS App (Flutter), and NodeJS/MongoDB backend.",
+      createdOn: "October 2022",
+      reason: "Client Project",
+      gallery: fashionGallery,
+      technologies: ["JSX", "React", "Redux toolkit", "Flutter/Dart", "Node JS", "Mongo DB"],
+      reversed: true,
+      projectLink: "https://fashion-dashboard-ten.vercel.app"
     },
     {
       title: "Proman",
@@ -27,15 +28,14 @@ function ProjectLine() {
       projectLink: "https://proman-frontend.vercel.app"
     },
     {
-      title: "Fashion Level",
-      description: "The e-commerce platform is a modern and efficient solution that provides a seamless shopping experience to customers.",
-      explaination: "Which includes Admin-Panel (ReactJS), Android/IOS App (Flutter), and NodeJS/MongoDB backend.",
-      createdOn: "October 2022",
-      reason: "Client Project",
-      gallery: fashionGallery,
-      technologies: ["JSX", "React", "Redux toolkit", "Flutter/Dart", "Node JS", "Mongo DB"],
-      reversed: true,
-      projectLink: "https://fashion-dashboard-ten.vercel.app"
+      title: "JShop",
+      description: "An online jewellery shop application created using Django and HTML with SQLite database server.",
+      explaination: "It is my first project that i have made which includes backend and database codes also.",
+      gallery: jshopGallery,
+      createdOn: "January 2019",
+      reason: "Personal Project",
+      technologies: ["Django", "HTML", "CSS", "JavaScript", "SQLlite"],
+      reversed: true
     },
     {
       title: "EMI App"
@@ -59,7 +59,7 @@ function ProjectLine() {
 const SingleProject = ({ data }) => {
   return (
     <FadeInWhenVisible className="singleProject">
-      <div className={`projectGrid ${ data?.reversed && "reversed"}`}>
+      <div className={`projectGrid ${data?.reversed && "reversed"}`}>
 
 
         <div className="imgDiv">
@@ -86,14 +86,14 @@ const SingleProject = ({ data }) => {
           </div>
 
           <span className="projectCreatedOn selfStart">{data?.createdOn}</span>
-          
-            <a href={data?.projectLink ? data?.projectLink : "#projects"} 
-            target="_blank" 
-            rel="noreferrer" 
+
+          <a href={data?.projectLink ? data?.projectLink : "#projects"}
+            target="_blank"
+            rel="noreferrer"
             className={` projectVisitLink ${!data?.reversed ? "selfStart" : ""}`}>
-              <BiLinkExternal size={18} />
-              <span>Visit Now!</span>
-            </a>
+            <BiLinkExternal size={18} />
+            <span>Visit Now!</span>
+          </a>
         </div>
 
       </div>
