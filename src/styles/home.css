@@ -719,6 +719,13 @@
         gap: 30px;
     }
 
+    .aboutParas {
+        font-size: 14px;
+    }
+    
+    .bigText2 {
+        font-size: 16px;
+    }
 
     .profileImgDiv {
         width: 60%;
