@@ -45,7 +45,6 @@ const Navbar = () => {
                             <li><a href="#intro"><span>Intro</span><span className='closeLink'>/&gt;</span></a></li>
                             <li><a href="#skills"><span>Skills</span><span className='closeLink'>/&gt;</span></a></li>
                             <li><a href="#projects"><span>Projects</span><span className='closeLink'>/&gt;</span></a></li>
-                            <li><a href="#gallery"><span>Gallery</span><span className='closeLink'>/&gt;</span></a></li>
                             <li><a href="#about"><span>About</span><span className='closeLink'>/&gt;</span></a></li>
                         </ul>
                         <div className="classLink flexCenter"
