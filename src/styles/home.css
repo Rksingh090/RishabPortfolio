@@ -32,7 +32,6 @@
     justify-content: center;
     scroll-snap-align: center;
     background-color: var(--introBG);
-    /* max-height: 1200px; */
 }
 
 
@@ -101,9 +100,6 @@
     font-family: "Anuphan", sans-serif;
     position: relative;
     z-index: 57;
-}
-.downloadAction,
-.greetAction {
     color: var(--main);
     border: 1px solid var(--main);
     border-radius: 5px;
@@ -448,6 +444,7 @@
 .selfStart {
     align-self: flex-start;
 }
+
 .projectVisitLink:hover {
     transform: translateX(5px);
 }
@@ -479,7 +476,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 1200px;
 }
 
 .aboutContainer {
@@ -542,6 +538,7 @@
 
 
 /* grid 2  */
+
 .aboutMeTexts {
     display: flex;
     flex-direction: column;
@@ -648,6 +645,10 @@
         max-height: 600px;
     }
 
+    .myIntroduction {
+        padding: 20px;
+    }
+
     .introWithLine {
         width: 90%;
         height: 60%;
@@ -670,20 +671,36 @@
         font-size: 25px;
     }
 
+    .downloadAction,
     .greetAction {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    /* fixed icons and contacts  */
+    .fixedContactRight,
+    .fixedSocialIconsLeft {
+        display: none;
     }
 
     /* skills  */
     .skillSections {
-        height: auto;
-        padding: 50px 0;
+        padding: 10px 0;
+    }
+
+    /* skill section  */
+    .skillContainer {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .skillsDivided {
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .skillSets {
-        width: 90%;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px;
+        gap: 30px;
     }
 
     .skillItem {
@@ -693,8 +710,14 @@
     /* about section  */
     .aboutSection {
         height: auto;
-        padding: 50px 0;
+        padding: 30px 0;
     }
+
+    .aboutContainer {
+        padding: 20px;
+        gap: 30px;
+    }
+
 
     .profileImgDiv {
         width: 60%;
@@ -705,7 +728,52 @@
     }
 
     .innerAboutSec {
-        width: 90%;
         grid-template-columns: minmax(0, 1fr);
     }
+
+    .aboutMeTexts {
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+    .toolsAndknowledge {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    /* project section  */
+    .projects {
+        padding: 10px 0;
+    }
+
+    .projectContainer {
+        padding: 20px;
+    }
+
+
+    .singleProject {
+        height: auto;
+    }
+
+    .projectGrid {
+        flex-direction: column;
+    }
+
+    .singleProjectList {
+        gap: 50px;
+    }
+    
+    .projectDetails {
+        position: relative;
+        width: 100%;
+    }
+
+    .projectGrid>.imgDiv {
+        width: 100%;
+    }
+
+
+
 }

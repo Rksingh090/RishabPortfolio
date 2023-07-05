@@ -46,3 +46,28 @@
     background-color: var(--main);
     width: auto;
 }
+
+
+@media only screen and (max-width: 500px) {
+    .footerResponsiveContainer {
+        padding: 20px;
+    }
+    .footerHireContainer {
+        padding: 20px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .footerHireContainer > div {
+        align-items: flex-start;
+    }
+
+
+    .footerHireContainer > p {
+        font-size: 14px;
+    }
+    .footerHireMeBtn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
