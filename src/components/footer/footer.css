@@ -1,10 +1,15 @@
 .footer {
-    padding: 100px 150px 40px 150px;
     width: 100%;
     background-color: var(--introBG);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footerResponsiveContainer {
+    padding: 100px 150px 40px 150px;
+    max-width: 1600px;
+    width: 100%;
 }
 
 .footerHireContainer {
