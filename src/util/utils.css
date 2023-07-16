@@ -68,3 +68,54 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
 }
+
+
+/* table  */
+.myCustomTable {
+    width: 100%;
+    border-collapse: separate !important;
+    border-spacing: 0;
+    border: 1px solid var(--main);
+    border-radius: 5px;
+}
+
+.myCustomTable > thead > tr > th:not(:last-child)  {
+    border-right: 1px solid var(--main);
+    border-bottom: 1px solid var(--main);
+}
+
+.myCustomTable > thead > tr > th:last-child  {
+    border-bottom: 1px solid var(--main);
+}
+
+
+.myCustomTable > tbody > tr:last-child > td:not(:last-child)  {
+    border-right: 1px solid var(--main);
+}
+
+.myCustomTable > tbody > tr:not(:last-child) > td:not(:last-child)  {
+    border-bottom: 1px solid var(--main);
+    border-right: 1px solid var(--main);
+}
+
+.myCustomTable > tbody > tr:not(:last-child) > td:last-child  {
+    border-bottom: 1px solid var(--main);
+}
+
+
+
+.myCustomTable > thead > tr > th {
+    text-align: start;
+    padding: 10px;
+    color: var(--main);
+    font-family: var(--mainFont);
+    font-weight: 500;
+}
+
+.myCustomTable > tbody > tr > td {
+    text-align: start;
+    padding: 10px;
+    color: white;
+    font-family: var(--mainFont);
+    font-weight: 400;
+}

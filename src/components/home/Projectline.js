@@ -13,8 +13,8 @@ function ProjectLine() {
       createdOn: "October 2022",
       reason: "Client Project",
       gallery: fashionGallery,
-      technologies: ["JSX", "React", "Redux toolkit", "Flutter/Dart", "Node JS", "Mongo DB"],
       reversed: true,
+      technologies: ["JSX", "React", "Redux toolkit", "Flutter/Dart", "Node JS", "Mongo DB"],
       projectLink: "https://fashion-dashboard-ten.vercel.app"
     },
     {
@@ -58,8 +58,8 @@ function ProjectLine() {
 
 const SingleProject = ({ data }) => {
   return (
-    <FadeInWhenVisible className="singleProject">
-      <div className={`projectGrid ${data?.reversed && "reversed"}`}>
+    <FadeInWhenVisible className={`singleProject ${data?.reversed && "reversed"}`}>
+      <div className={`projectGrid `}>
 
 
         <div className="imgDiv">
@@ -68,10 +68,10 @@ const SingleProject = ({ data }) => {
         </div>
 
 
-        <div className={`projectDetails ${data?.reversed ? "reversed" : ""}`}>
+        <div className={`projectDetails`}>
 
-          <h2 className="projectFeatured">Featured Project</h2>
-          <h2 className="projectTitle">{data?.title}</h2>
+          <h2 className={`projectFeatured`}>Featured Project</h2>
+          <h2 className={`projectTitle`}>{data?.title}</h2>
           <div className="projectDescExp">
             <p className="projectDescription">{data?.description}</p>
             <p className="projectDescription">{data?.explaination}</p>

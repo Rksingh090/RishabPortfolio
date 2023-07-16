@@ -30,7 +30,7 @@ const IntroSection = () => {
                     >
                         Explore Now.....
                     </a>
-                    <a href="https://download1593.mediafire.com/iwvy8z2cdvegzcXQMGkw570m-vEh4L35mnLGoyxH28KAImhhVPQh1VNxjIy3cKSAfF2Z7PYyzuhwMgxPRHVsP9TMU0KmcuYZN1Pl5x5lE_NZnmltyu0SsUuimpASfAEkXNjiUubJV7erkA-qycgOqKWXODYUafPHBr66uZ8XqCU8/g8sy41x62ds7uen/rishab_singh.pdf"
+                    <a href="https://download1581.mediafire.com/tb6ck72lhabgPnktB6Y0ARtah84o8EAh-QQ-Q57-EaB-QsHaeVo4VcnuFZ10E0I5omxh6I8FPHEohPPSsHGF596uZrDKM3CvPv-kJwL_ouZzkLm4AZR8qz0Vhyzx0CEJcJyVWNuSZielBz3I_V6XaIeXdQaCHo7S7S_xddYKMkAm8MY/uvg0yjy475e6q2b/Rishab_Singh_CV.pdf"
                         className='downloadAction'
                         download={"Rishab Singh"}
                         onMouseEnter={onHoverStart}

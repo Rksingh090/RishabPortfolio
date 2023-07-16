@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./navbar.css";
 
 import { IoMdClose } from 'react-icons/io';
@@ -12,8 +12,25 @@ const Navbar = () => {
 
     const [showMobileBar, setShowMobileBar] = useState(false);
 
+    const outsideclickref = useRef()
+
+    useEffect(() => {
+
+        const outsideClickHandler = (e) => {
+            if (outsideclickref.current && !outsideclickref.current.contains(e.target)) {
+                if (showMobileBar === true) {
+                    setShowMobileBar(false)
+                }
+            }
+        }
+
+        window.addEventListener("mousedown", outsideClickHandler)
+        return () => window.removeEventListener("mousedown", outsideClickHandler);
+
+    }, [outsideclickref])
+
     return (
-        <div className='navbar'>
+        <div className='navbar' ref={outsideclickref}>
             <div className='navcontainer'>
                 <a href="/#intro" className='heading'>
                     <h2>
@@ -30,6 +47,7 @@ const Navbar = () => {
                         <li><a href="#intro"><span>Intro</span><span className='closeLink'>/&gt;</span></a></li>
                         <li><a href="#skills"><span>Skills</span><span className='closeLink'>/&gt;</span></a></li>
                         <li><a href="#projects"><span>Projects</span><span className='closeLink'>/&gt;</span></a></li>
+                        <li><a href="#experiance"><span>Experiance</span><span className='closeLink'>/&gt;</span></a></li>
                         <li><a href="#about"><span>About</span><span className='closeLink'>/&gt;</span></a></li>
                     </ul>
                 </div>
@@ -45,6 +63,7 @@ const Navbar = () => {
                             <li><a href="#intro"><span>Intro</span><span className='closeLink'>/&gt;</span></a></li>
                             <li><a href="#skills"><span>Skills</span><span className='closeLink'>/&gt;</span></a></li>
                             <li><a href="#projects"><span>Projects</span><span className='closeLink'>/&gt;</span></a></li>
+                            <li><a href="#experiance"><span>Experiance</span><span className='closeLink'>/&gt;</span></a></li>
                             <li><a href="#about"><span>About</span><span className='closeLink'>/&gt;</span></a></li>
                         </ul>
                         <div className="classLink flexCenter"
