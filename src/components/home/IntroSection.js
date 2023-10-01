@@ -30,7 +30,7 @@ const IntroSection = () => {
                     >
                         Explore Now.....
                     </a>
-                    <a href="blob:https://github.com/84bb1026-ae99-49d0-81c3-72dbec96c473"
+                    <a href="https://drive.google.com/file/d/15nC0U7QtgdlALO1aSqr63JKKpKG5vbpJ/view"
                         className='downloadAction'
                         download={"Rishab Singh"}
                         onMouseEnter={onHoverStart}
