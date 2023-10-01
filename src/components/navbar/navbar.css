@@ -81,32 +81,46 @@
 
 .mobNavlinkArea {
     display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 75px;
-    bottom: 15px;
-    right: 15px;
-    width: 60%;
-    min-height: 450px;
-    background-color: rgba(0,0,0, 0.3);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: var(--introBGLight);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-radius: 5px;
-}
-.mobNavLinks {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 40px;
+    border-radius: 20px 20px 0 0;
+    gap: 10px;
 }
 
-.mobNavLinks>li  {
+.padWithFullXY {
+    gap: 20px;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.mobNavLinks {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    row-gap: 15px;
+    column-gap: 10px;
+}
+
+.mobNavLinks>li {
     list-style: none;
 }
-.mobNavLinks>li>a  {
+
+.mobNavLinks>li>a {
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -114,11 +128,62 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    padding: 7px;
+    border-radius: 5px;
+
+    background-color: rgba(0, 0, 0, 0.244);
 }
+
+
 .mobNavLinks>li>a>span {
-    font-size: 22px;
+    font-size: 16x;
 }
+
+.mobNavLinks>li>a>.closeLink {
+    display: none;
+}
+
+.mobileNavBtns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+.navSocialIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.navContactAddress {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.navContactAddress>a {
+    color: white;
+    font-family: "Anuphan", sans-serif;
+}
+
+.navSocialIcons>.icon {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.244);
+    padding: 15px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 230px;
+}
+
 .classLink {
     position: absolute;
     top: 10px;
@@ -130,17 +195,36 @@
     color: white;
 }
 
+.barView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.barView>.bar {
+    width: 70%;
+    max-width: 70px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: white;
+}
+
 
 @media only screen and (max-width: 500px) {
     .navcontainer {
         width: 90%;
     }
+
     .menuHamburger {
         display: block;
     }
+
     .navlinkarea {
         display: none;
     }
+
     .mobNavlinkArea {
         display: flex;
     }

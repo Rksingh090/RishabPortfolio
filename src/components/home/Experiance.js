@@ -16,8 +16,8 @@ const Experiance = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Let's Learn Institute</td>
-                                <td>March 2023 - Current</td>
+                                <td>Krishwork's Technology Research and Labs Institute</td>
+                                <td>August 2023 - Current</td>
                             </tr>
                             <tr>
                                 <td>Harshaweb Pvt. Ltd.</td>

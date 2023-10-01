@@ -36,6 +36,7 @@ const IntroSection = () => {
                         onMouseEnter={onHoverStart}
                         onMouseLeave={onHoverEnd}
                         target="_blank"
+                        rel='noreferrer'
                     >
                         Download Resume
                     </a>
