@@ -10,7 +10,7 @@ const IntroSection = () => {
             {/* introduction  */}
             <div className='myIntroduction mainContentContainer'>
                 <p className='introSubtitle ffAnuphan'>Hi, my name is</p>
-                <h2 className='introTitle ffAnuphan'>Rishab Singh.</h2>
+                <h2 className='introTitle ffAnuphan'>Sunny Singh.</h2>
                 <h2 className='introDynamicText'>
                     <span>I'm a</span>
                     <div className='dynamictext'>
